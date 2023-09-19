@@ -1,0 +1,24 @@
+{
+  "name": "sponsors-nitro",
+  "version": "1.0.0",
+  "description": "A unjs/nitro server to collect donators email",
+  "author": "Learntheropes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anybtcpay/sponsors-nitro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anybtcpay/sponsors-nitro/issues"
+  },
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "faunadb": "^4.8.0",
+    "nitropack": "latest"
+  }
+}
