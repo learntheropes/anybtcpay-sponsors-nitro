@@ -2,8 +2,7 @@ import { createHmac } from 'crypto';
 
 export default defineEventHandler(async (event) => {
 
-  const { btcpaySecret, faunaSecret } = useRuntimeConfig(event);
-
+  const { btcpaySecret } = useRuntimeConfig(event);
 
   const signature = getRequestHeader(event, 'btcpay-sig');
 
@@ -13,8 +12,6 @@ export default defineEventHandler(async (event) => {
   };
 
   const rawBody = await readRawBody(event, 'utf8');
-
-  console.log('btcpaySecret', btcpaySecret)
 
   const expectedSignature = 'sha256=' + createHmac('sha256', btcpaySecret).update(rawBody).digest('hex');
 
