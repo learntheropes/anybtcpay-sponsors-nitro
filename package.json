@@ -18,7 +18,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "faunadb": "^4.8.0",
+    "mongodb": "^6.15.0",
     "nitropack": "latest"
   }
 }

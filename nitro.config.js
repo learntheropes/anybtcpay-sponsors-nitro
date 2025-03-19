@@ -1,6 +1,6 @@
 export default defineNitroConfig({
   runtimeConfig: {
-    faunaSecret: process.env.FAUNA_SECRET,
+    mongoUri: process.env.MONGODB_URI,
     btcpaySecret: process.env.BTCPAY_SECRET
   },
 });
